@@ -152,7 +152,7 @@ postgres@otus:/home/otus$  mv /var/lib/postgresql/12 /mnt/vdb1
 postgres@otus:/home/otus$ pg_ctlcluster 12 main start
 Error: /var/lib/postgresql/12/main is not accessible or does not exist
 ```
-Запустить не получилось так как не найдены файлы нужные для старта
+Запустить не получилось так как не найдены файлы базы данных
 
 
 11. *задание: найти конфигурационный параметр в файлах раположенных в /etc/postgresql/15/main который надо поменять и поменяйте его*
@@ -168,7 +168,7 @@ conf.d  environment  pg_ctl.conf  pg_hba.conf  pg_ident.conf  postgresql.conf  s
 
 ![postgresql.conf](postgresql_conf_before_edit.png)
 
-Поменял значение data_directory на /mnt/vdb1/12/main
+Поменял значение data_directory на /mnt/vdb1/12/main, чтобы теперь postgresql знал, где лежат файлы баз данных
 
 ![postgresql.conf](postgresql_conf_after_edit.png)
 
